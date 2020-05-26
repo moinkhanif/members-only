@@ -9,4 +9,3 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:member).permit(:name, :email, :password, :password_confirmation, :current_password)
   end
 end
-

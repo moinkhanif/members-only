@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
-  before_action :authenticate_member!, only: [:new, :create]
+  before_action :authenticate_member!, only: %i[new create]
 
   def new
     @post = current_member.posts.build
   end
-  
+
   def create
     @post = current_member.posts.build(post_params)
     @post.save
@@ -13,9 +13,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    if current_member
-      @post = current_member.posts.build
-    end
+    @post = current_member.posts.build if current_member
   end
 
   def post_params

@@ -7,7 +7,7 @@
 
 ## About the project
 
-
+This project is about creating a fake social network where members can post messages about non-members and only them can see the name of the posts creator.
 
 ## Requirements
 
@@ -18,8 +18,8 @@
 ## Features
 
 Some of the features of this project include:
-
-
+  -User authentication.
+  -Access restriction depending on whether or not users are loged in.
 
 ## Technologies Used
 
