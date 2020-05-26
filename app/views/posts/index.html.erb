@@ -1,0 +1,12 @@
+<% if member_signed_in? %>
+  <%= render 'form'%>
+<% end %>
+<% @posts.each do |p|%>
+  <p><%= p.body%></p>
+  <% if member_signed_in? %>
+    <h3> <%= p.member.name %> </h3>
+  <% else %>
+    <h3>anonymous</h3>
+  <% end %>
+  
+<% end %>
