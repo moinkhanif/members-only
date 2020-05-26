@@ -10,13 +10,13 @@
   </head>
 
   <body>
-    <nav>
+    <nav class ="main-nav">
     <% if member_signed_in? %>
-      <h1>Hi i am signed in!</h1>
-      <%= link_to 'Logout', destroy_member_session_path, method: :delete %>
+      <h1 class= "title">Hi <%= current_member.name %></h1>
+      <%= link_to 'Logout', destroy_member_session_path, method: :delete, class: "button" %>
     <% else %>
-      <%= link_to 'Sign In', new_member_session_path %>
-      <%= link_to 'Sign Up', new_member_registration_path %>
+      <%= link_to 'Sign In', new_member_session_path, class: "button" %>
+      <%= link_to 'Sign Up', new_member_registration_path, class: "button" %>
     <% end %>
     </nav>
     <p class="notice"><%= notice %></p>

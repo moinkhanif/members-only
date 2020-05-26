@@ -1,4 +1,5 @@
 <%= form_for @post, url: {action: "create"}, html: {class: "new-form"} do |f| %>
-  <%= f.text_area :body, size: "60x6" %>
-  <%= f.submit "Create" %>
+  <%= f.text_area :body, size: "60x6", class: "text-area" %>
+  <br>
+  <%= f.submit "Create", class: "create-button" %>
 <% end %>
